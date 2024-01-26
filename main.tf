@@ -16,7 +16,7 @@ variable "project_id" {
 provider "google" {
   region = "us-west2"
   zone = "us-west2a"
-  provider = var.project_id
+  project = var.project_id
 }
 
 
