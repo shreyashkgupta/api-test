@@ -21,6 +21,12 @@ provider "google" {
 
 
 
+resource "random_id" "randomID" {{
+  byte_length = 8
+}}
+
+
+
 resource "google_firestore_database" "gcp-new-test-dev-users" {
   name                              = "gcp-new-test-dev-users"
   location_id                       = "nam5"
