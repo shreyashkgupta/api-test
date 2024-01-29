@@ -33,67 +33,67 @@ resource "google_firestore_database" "gcp-new-test-dev-users" {
   type                              = "FIRESTORE_NATIVE"
 }
 
-resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
+resource "google_storage_bucket" "gcp-new-test-Dev-Create_User-bucket" {
   name                        = "${random_id.randomID.hex-gcf-source}"
   location                    = "US"
   uniform_bucket_level_access = true
 }
 
-resource "google_cloud_run_service_iam_member" "Dev_Create User_member" {
-  location = google_cloudfunctions2_function.cf_Dev_Create User.location
-  service  = google_cloudfunctions2_function.cf_Dev_Create User.name
+resource "google_cloud_run_service_iam_member" "Dev_Create_User_member" {
+  location = google_cloudfunctions2_function.cf_Dev_Create_User.location
+  service  = google_cloudfunctions2_function.cf_Dev_Create_User.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
 
-resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
+resource "google_storage_bucket" "gcp-new-test-Dev-Get_User-bucket" {
   name                        = "${random_id.randomID.hex-gcf-source}"
   location                    = "US"
   uniform_bucket_level_access = true
 }
 
-resource "google_cloud_run_service_iam_member" "Dev_Get User_member" {
-  location = google_cloudfunctions2_function.cf_Dev_Get User.location
-  service  = google_cloudfunctions2_function.cf_Dev_Get User.name
+resource "google_cloud_run_service_iam_member" "Dev_Get_User_member" {
+  location = google_cloudfunctions2_function.cf_Dev_Get_User.location
+  service  = google_cloudfunctions2_function.cf_Dev_Get_User.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
 
-resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
+resource "google_storage_bucket" "gcp-new-test-Dev-Update_User-bucket" {
   name                        = "${random_id.randomID.hex-gcf-source}"
   location                    = "US"
   uniform_bucket_level_access = true
 }
 
-resource "google_cloud_run_service_iam_member" "Dev_Update User_member" {
-  location = google_cloudfunctions2_function.cf_Dev_Update User.location
-  service  = google_cloudfunctions2_function.cf_Dev_Update User.name
+resource "google_cloud_run_service_iam_member" "Dev_Update_User_member" {
+  location = google_cloudfunctions2_function.cf_Dev_Update_User.location
+  service  = google_cloudfunctions2_function.cf_Dev_Update_User.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
 
-resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
+resource "google_storage_bucket" "gcp-new-test-Dev-Delete_User-bucket" {
   name                        = "${random_id.randomID.hex-gcf-source}"
   location                    = "US"
   uniform_bucket_level_access = true
 }
 
-resource "google_cloud_run_service_iam_member" "Dev_Delete User_member" {
-  location = google_cloudfunctions2_function.cf_Dev_Delete User.location
-  service  = google_cloudfunctions2_function.cf_Dev_Delete User.name
+resource "google_cloud_run_service_iam_member" "Dev_Delete_User_member" {
+  location = google_cloudfunctions2_function.cf_Dev_Delete_User.location
+  service  = google_cloudfunctions2_function.cf_Dev_Delete_User.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
 
-resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
+resource "google_storage_bucket" "gcp-new-test-Dev-List_Users-bucket" {
   name                        = "${random_id.randomID.hex-gcf-source}"
   location                    = "US"
   uniform_bucket_level_access = true
 }
 
-resource "google_cloud_run_service_iam_member" "Dev_List Users_member" {
-  location = google_cloudfunctions2_function.cf_Dev_List Users.location
-  service  = google_cloudfunctions2_function.cf_Dev_List Users.name
+resource "google_cloud_run_service_iam_member" "Dev_List_Users_member" {
+  location = google_cloudfunctions2_function.cf_Dev_List_Users.location
+  service  = google_cloudfunctions2_function.cf_Dev_List_Users.name
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
