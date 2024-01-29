@@ -26,7 +26,3 @@ resource "google_firestore_database" "gcp-new-test-dev-users" {
   location_id                       = "nam5"
   type                              = "FIRESTORE_NATIVE"
 }
-
-resource "random_id" "randomID" {
-  byte_length = 8
-}
