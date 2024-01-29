@@ -43,9 +43,9 @@ source_dir  = "lambdas/Create_User"
 output_path = "lambdas/Create_User.zip"
 }
 
-resource "google_storage_bucket_object" "Dev-Create_User-object" {
+resource "google_storage_bucket_object" "gcp-new-test-Dev-Create_User-object" {
   name   = "Dev-Create_User-source.zip"
-  bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
+  bucket = google_storage_bucket.gcp-new-test-Dev-Create_User-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_Create_User.output_path # Add path to the zipped function source code
 }
 
@@ -57,8 +57,8 @@ resource "google_cloudfunctions2_function" "cf_Dev_Create_User" {
     runtime     = "python39"
     source {
       storage_source {
-        bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
-        object = google_storage_bucket_object.Dev-Create_User-object.name
+        bucket = google_storage_bucket.gcp-new-test-Dev-Create_User-bucket.name
+        object = google_storage_bucket_object.gcp-new-test-Dev-Create_User-object.name
       }
     }
   }
@@ -93,9 +93,9 @@ source_dir  = "lambdas/Get_User"
 output_path = "lambdas/Get_User.zip"
 }
 
-resource "google_storage_bucket_object" "Dev-Get_User-object" {
+resource "google_storage_bucket_object" "gcp-new-test-Dev-Get_User-object" {
   name   = "Dev-Get_User-source.zip"
-  bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
+  bucket = google_storage_bucket.gcp-new-test-Dev-Get_User-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_Get_User.output_path # Add path to the zipped function source code
 }
 
@@ -107,8 +107,8 @@ resource "google_cloudfunctions2_function" "cf_Dev_Get_User" {
     runtime     = "python39"
     source {
       storage_source {
-        bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
-        object = google_storage_bucket_object.Dev-Get_User-object.name
+        bucket = google_storage_bucket.gcp-new-test-Dev-Get_User-bucket.name
+        object = google_storage_bucket_object.gcp-new-test-Dev-Get_User-object.name
       }
     }
   }
@@ -143,9 +143,9 @@ source_dir  = "lambdas/Update_User"
 output_path = "lambdas/Update_User.zip"
 }
 
-resource "google_storage_bucket_object" "Dev-Update_User-object" {
+resource "google_storage_bucket_object" "gcp-new-test-Dev-Update_User-object" {
   name   = "Dev-Update_User-source.zip"
-  bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
+  bucket = google_storage_bucket.gcp-new-test-Dev-Update_User-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_Update_User.output_path # Add path to the zipped function source code
 }
 
@@ -157,8 +157,8 @@ resource "google_cloudfunctions2_function" "cf_Dev_Update_User" {
     runtime     = "python39"
     source {
       storage_source {
-        bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
-        object = google_storage_bucket_object.Dev-Update_User-object.name
+        bucket = google_storage_bucket.gcp-new-test-Dev-Update_User-bucket.name
+        object = google_storage_bucket_object.gcp-new-test-Dev-Update_User-object.name
       }
     }
   }
@@ -193,9 +193,9 @@ source_dir  = "lambdas/Delete_User"
 output_path = "lambdas/Delete_User.zip"
 }
 
-resource "google_storage_bucket_object" "Dev-Delete_User-object" {
+resource "google_storage_bucket_object" "gcp-new-test-Dev-Delete_User-object" {
   name   = "Dev-Delete_User-source.zip"
-  bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
+  bucket = google_storage_bucket.gcp-new-test-Dev-Delete_User-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_Delete_User.output_path # Add path to the zipped function source code
 }
 
@@ -207,8 +207,8 @@ resource "google_cloudfunctions2_function" "cf_Dev_Delete_User" {
     runtime     = "python39"
     source {
       storage_source {
-        bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
-        object = google_storage_bucket_object.Dev-Delete_User-object.name
+        bucket = google_storage_bucket.gcp-new-test-Dev-Delete_User-bucket.name
+        object = google_storage_bucket_object.gcp-new-test-Dev-Delete_User-object.name
       }
     }
   }
@@ -243,9 +243,9 @@ source_dir  = "lambdas/List_Users"
 output_path = "lambdas/List_Users.zip"
 }
 
-resource "google_storage_bucket_object" "Dev-List_Users-object" {
+resource "google_storage_bucket_object" "gcp-new-test-Dev-List_Users-object" {
   name   = "Dev-List_Users-source.zip"
-  bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
+  bucket = google_storage_bucket.gcp-new-test-Dev-List_Users-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_List_Users.output_path # Add path to the zipped function source code
 }
 
@@ -257,8 +257,8 @@ resource "google_cloudfunctions2_function" "cf_Dev_List_Users" {
     runtime     = "python39"
     source {
       storage_source {
-        bucket = google_storage_bucket.gcp-new-test-Dev-bucket.name
-        object = google_storage_bucket_object.Dev-List_Users-object.name
+        bucket = google_storage_bucket.gcp-new-test-Dev-List_Users-bucket.name
+        object = google_storage_bucket_object.gcp-new-test-Dev-List_Users-object.name
       }
     }
   }
