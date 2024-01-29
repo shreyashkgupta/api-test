@@ -45,7 +45,7 @@ output_path = "cloudfunctions/create_user.zip"
 
 resource "google_storage_bucket_object" "Dev-create_user-object" {
   name   = "Dev-create_user-source.zip"
-  bucket = google_storage_bucket.work-Dev-create_user-bucket.name
+  bucket = google_storage_bucket.Dev-create_user-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_create_user.output_path # Add path to the zipped function source code
 }
 
@@ -106,7 +106,7 @@ output_path = "cloudfunctions/get_user.zip"
 
 resource "google_storage_bucket_object" "Dev-get_user-object" {
   name   = "Dev-get_user-source.zip"
-  bucket = google_storage_bucket.work-Dev-get_user-bucket.name
+  bucket = google_storage_bucket.Dev-get_user-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_get_user.output_path # Add path to the zipped function source code
 }
 
@@ -167,7 +167,7 @@ output_path = "cloudfunctions/update_user.zip"
 
 resource "google_storage_bucket_object" "Dev-update_user-object" {
   name   = "Dev-update_user-source.zip"
-  bucket = google_storage_bucket.work-Dev-update_user-bucket.name
+  bucket = google_storage_bucket.Dev-update_user-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_update_user.output_path # Add path to the zipped function source code
 }
 
@@ -228,7 +228,7 @@ output_path = "cloudfunctions/delete_user.zip"
 
 resource "google_storage_bucket_object" "Dev-delete_user-object" {
   name   = "Dev-delete_user-source.zip"
-  bucket = google_storage_bucket.work-Dev-delete_user-bucket.name
+  bucket = google_storage_bucket.Dev-delete_user-bucket.name
   source = data.archive_file.zip_the_python_code_Dev_delete_user.output_path # Add path to the zipped function source code
 }
 
