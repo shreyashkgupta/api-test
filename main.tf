@@ -21,9 +21,9 @@ provider "google" {
 
 
 
-resource "random_id" "randomID" {{
+resource "random_id" "randomID" {
   byte_length = 8
-}}
+}
 
 
 
