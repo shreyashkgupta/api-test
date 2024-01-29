@@ -34,7 +34,7 @@ resource "google_firestore_database" "gcp-new-test-dev-users" {
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
-  name                        = "gcf-source"
+  name                        = "${random_id.randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -47,7 +47,7 @@ resource "google_cloud_run_service_iam_member" "Dev_Create User_member" {
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
-  name                        = "gcf-source"
+  name                        = "${random_id.randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -60,7 +60,7 @@ resource "google_cloud_run_service_iam_member" "Dev_Get User_member" {
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
-  name                        = "gcf-source"
+  name                        = "${random_id.randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -73,7 +73,7 @@ resource "google_cloud_run_service_iam_member" "Dev_Update User_member" {
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
-  name                        = "gcf-source"
+  name                        = "${random_id.randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -86,7 +86,7 @@ resource "google_cloud_run_service_iam_member" "Dev_Delete User_member" {
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-bucket" {
-  name                        = "gcf-source"
+  name                        = "${random_id.randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
