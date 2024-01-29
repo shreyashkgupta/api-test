@@ -21,8 +21,8 @@ provider "google" {
 
 
 
-resource "google_firestore_database" "work-dev-user_data" {
-  name                              = "work-dev-user_data"
+resource "google_firestore_database" "work-dev-user-data" {
+  name                              = "work-dev-user-data"
   location_id                       = "nam5"
   type                              = "FIRESTORE_NATIVE"
 }
