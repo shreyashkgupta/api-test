@@ -21,8 +21,8 @@ provider "google" {
 
 
 
-resource "google_firestore_database" "okay-test-Dev-User" {
-  name                              = "okay-test-Dev-User"
+resource "google_firestore_database" "okay-test-dev-user" {
+  name                              = "okay-test-dev-user"
   location_id                       = "nam5"
   type                              = "FIRESTORE_NATIVE"
 }
