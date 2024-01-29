@@ -82,7 +82,7 @@ resource "google_cloudfunctions_function" "cf_Dev_create_user" {
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_create_user_member" {
-  location = google_cloudfunctions_function.cf_Dev_create_user.location
+  location = google_cloudfunctions_function.cf_Dev_create_user.region
   service  = google_cloudfunctions_function.cf_Dev_create_user.name
   role     = "roles/run.invoker"
   member   = "allUsers"
@@ -143,7 +143,7 @@ resource "google_cloudfunctions_function" "cf_Dev_get_user" {
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_get_user_member" {
-  location = google_cloudfunctions_function.cf_Dev_get_user.location
+  location = google_cloudfunctions_function.cf_Dev_get_user.region
   service  = google_cloudfunctions_function.cf_Dev_get_user.name
   role     = "roles/run.invoker"
   member   = "allUsers"
@@ -204,7 +204,7 @@ resource "google_cloudfunctions_function" "cf_Dev_update_user" {
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_update_user_member" {
-  location = google_cloudfunctions_function.cf_Dev_update_user.location
+  location = google_cloudfunctions_function.cf_Dev_update_user.region
   service  = google_cloudfunctions_function.cf_Dev_update_user.name
   role     = "roles/run.invoker"
   member   = "allUsers"
@@ -265,7 +265,7 @@ resource "google_cloudfunctions_function" "cf_Dev_delete_user" {
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_delete_user_member" {
-  location = google_cloudfunctions_function.cf_Dev_delete_user.location
+  location = google_cloudfunctions_function.cf_Dev_delete_user.region
   service  = google_cloudfunctions_function.cf_Dev_delete_user.name
   role     = "roles/run.invoker"
   member   = "allUsers"
