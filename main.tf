@@ -39,8 +39,8 @@ resource "google_storage_bucket" "work-Dev-create_user-bucket" {
 
 data "archive_file" "zip_the_python_code_Dev_create_user" {
 type        = "zip"
-source_dir  = "lambdas/create_user"
-output_path = "lambdas/create_user.zip"
+source_dir  = "cloudfunctions/create_user"
+output_path = "cloudfunctions/create_user.zip"
 }
 
 resource "google_storage_bucket_object" "work-Dev-create_user-object" {
@@ -89,8 +89,8 @@ resource "google_storage_bucket" "work-Dev-get_user-bucket" {
 
 data "archive_file" "zip_the_python_code_Dev_get_user" {
 type        = "zip"
-source_dir  = "lambdas/get_user"
-output_path = "lambdas/get_user.zip"
+source_dir  = "cloudfunctions/get_user"
+output_path = "cloudfunctions/get_user.zip"
 }
 
 resource "google_storage_bucket_object" "work-Dev-get_user-object" {
@@ -139,8 +139,8 @@ resource "google_storage_bucket" "work-Dev-update_user-bucket" {
 
 data "archive_file" "zip_the_python_code_Dev_update_user" {
 type        = "zip"
-source_dir  = "lambdas/update_user"
-output_path = "lambdas/update_user.zip"
+source_dir  = "cloudfunctions/update_user"
+output_path = "cloudfunctions/update_user.zip"
 }
 
 resource "google_storage_bucket_object" "work-Dev-update_user-object" {
@@ -189,8 +189,8 @@ resource "google_storage_bucket" "work-Dev-delete_user-bucket" {
 
 data "archive_file" "zip_the_python_code_Dev_delete_user" {
 type        = "zip"
-source_dir  = "lambdas/delete_user"
-output_path = "lambdas/delete_user.zip"
+source_dir  = "cloudfunctions/delete_user"
+output_path = "cloudfunctions/delete_user.zip"
 }
 
 resource "google_storage_bucket_object" "work-Dev-delete_user-object" {
