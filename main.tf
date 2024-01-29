@@ -49,25 +49,36 @@ resource "google_storage_bucket_object" "work-Dev-create_user-object" {
   source = data.archive_file.zip_the_python_code_Dev_create_user.output_path # Add path to the zipped function source code
 }
 
-resource "google_cloudfunctions2_function" "cf_Dev_create_user" {
+# resource "google_cloudfunctions2_function" "cf_Dev_create_user" {
+#   name        = "work-Dev-create_user"
+#   location    = "us-west2"
+
+#   build_config {
+#     runtime     = "python39"
+#     source {
+#       storage_source {
+#         bucket = google_storage_bucket.work-Dev-create_user-bucket.name
+#         object = google_storage_bucket_object.work-Dev-create_user-object.name
+#       }
+#     }
+#   }
+
+#   service_config {
+#     max_instance_count = 1
+#     available_memory   = "256M"
+#     timeout_seconds    = 60
+#   }
+# }
+
+resource "google_cloudfunctions_function" "cf_Dev_create_user" {
   name        = "work-Dev-create_user"
-  location    = "us-west2"
+  runtime     = "python39"
 
-  build_config {
-    runtime     = "python39"
-    source {
-      storage_source {
-        bucket = google_storage_bucket.work-Dev-create_user-bucket.name
-        object = google_storage_bucket_object.work-Dev-create_user-object.name
-      }
-    }
-  }
-
-  service_config {
-    max_instance_count = 1
-    available_memory   = "256M"
-    timeout_seconds    = 60
-  }
+  source_archive_bucket = google_storage_bucket.work-Dev-create_user-bucket.name
+  source_archive_object = google_storage_bucket_object.work-Dev-create_user-object.name
+  available_memory_mb = "256"
+  timeout = 60
+  max_instances = 1
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_create_user_member" {
@@ -99,25 +110,36 @@ resource "google_storage_bucket_object" "work-Dev-get_user-object" {
   source = data.archive_file.zip_the_python_code_Dev_get_user.output_path # Add path to the zipped function source code
 }
 
-resource "google_cloudfunctions2_function" "cf_Dev_get_user" {
+# resource "google_cloudfunctions2_function" "cf_Dev_get_user" {
+#   name        = "work-Dev-get_user"
+#   location    = "us-west2"
+
+#   build_config {
+#     runtime     = "python39"
+#     source {
+#       storage_source {
+#         bucket = google_storage_bucket.work-Dev-get_user-bucket.name
+#         object = google_storage_bucket_object.work-Dev-get_user-object.name
+#       }
+#     }
+#   }
+
+#   service_config {
+#     max_instance_count = 1
+#     available_memory   = "256M"
+#     timeout_seconds    = 60
+#   }
+# }
+
+resource "google_cloudfunctions_function" "cf_Dev_get_user" {
   name        = "work-Dev-get_user"
-  location    = "us-west2"
+  runtime     = "python39"
 
-  build_config {
-    runtime     = "python39"
-    source {
-      storage_source {
-        bucket = google_storage_bucket.work-Dev-get_user-bucket.name
-        object = google_storage_bucket_object.work-Dev-get_user-object.name
-      }
-    }
-  }
-
-  service_config {
-    max_instance_count = 1
-    available_memory   = "256M"
-    timeout_seconds    = 60
-  }
+  source_archive_bucket = google_storage_bucket.work-Dev-get_user-bucket.name
+  source_archive_object = google_storage_bucket_object.work-Dev-get_user-object.name
+  available_memory_mb = "256"
+  timeout = 60
+  max_instances = 1
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_get_user_member" {
@@ -149,25 +171,36 @@ resource "google_storage_bucket_object" "work-Dev-update_user-object" {
   source = data.archive_file.zip_the_python_code_Dev_update_user.output_path # Add path to the zipped function source code
 }
 
-resource "google_cloudfunctions2_function" "cf_Dev_update_user" {
+# resource "google_cloudfunctions2_function" "cf_Dev_update_user" {
+#   name        = "work-Dev-update_user"
+#   location    = "us-west2"
+
+#   build_config {
+#     runtime     = "python39"
+#     source {
+#       storage_source {
+#         bucket = google_storage_bucket.work-Dev-update_user-bucket.name
+#         object = google_storage_bucket_object.work-Dev-update_user-object.name
+#       }
+#     }
+#   }
+
+#   service_config {
+#     max_instance_count = 1
+#     available_memory   = "256M"
+#     timeout_seconds    = 60
+#   }
+# }
+
+resource "google_cloudfunctions_function" "cf_Dev_update_user" {
   name        = "work-Dev-update_user"
-  location    = "us-west2"
+  runtime     = "python39"
 
-  build_config {
-    runtime     = "python39"
-    source {
-      storage_source {
-        bucket = google_storage_bucket.work-Dev-update_user-bucket.name
-        object = google_storage_bucket_object.work-Dev-update_user-object.name
-      }
-    }
-  }
-
-  service_config {
-    max_instance_count = 1
-    available_memory   = "256M"
-    timeout_seconds    = 60
-  }
+  source_archive_bucket = google_storage_bucket.work-Dev-update_user-bucket.name
+  source_archive_object = google_storage_bucket_object.work-Dev-update_user-object.name
+  available_memory_mb = "256"
+  timeout = 60
+  max_instances = 1
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_update_user_member" {
@@ -199,25 +232,36 @@ resource "google_storage_bucket_object" "work-Dev-delete_user-object" {
   source = data.archive_file.zip_the_python_code_Dev_delete_user.output_path # Add path to the zipped function source code
 }
 
-resource "google_cloudfunctions2_function" "cf_Dev_delete_user" {
+# resource "google_cloudfunctions2_function" "cf_Dev_delete_user" {
+#   name        = "work-Dev-delete_user"
+#   location    = "us-west2"
+
+#   build_config {
+#     runtime     = "python39"
+#     source {
+#       storage_source {
+#         bucket = google_storage_bucket.work-Dev-delete_user-bucket.name
+#         object = google_storage_bucket_object.work-Dev-delete_user-object.name
+#       }
+#     }
+#   }
+
+#   service_config {
+#     max_instance_count = 1
+#     available_memory   = "256M"
+#     timeout_seconds    = 60
+#   }
+# }
+
+resource "google_cloudfunctions_function" "cf_Dev_delete_user" {
   name        = "work-Dev-delete_user"
-  location    = "us-west2"
+  runtime     = "python39"
 
-  build_config {
-    runtime     = "python39"
-    source {
-      storage_source {
-        bucket = google_storage_bucket.work-Dev-delete_user-bucket.name
-        object = google_storage_bucket_object.work-Dev-delete_user-object.name
-      }
-    }
-  }
-
-  service_config {
-    max_instance_count = 1
-    available_memory   = "256M"
-    timeout_seconds    = 60
-  }
+  source_archive_bucket = google_storage_bucket.work-Dev-delete_user-bucket.name
+  source_archive_object = google_storage_bucket_object.work-Dev-delete_user-object.name
+  available_memory_mb = "256"
+  timeout = 60
+  max_instances = 1
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_delete_user_member" {
