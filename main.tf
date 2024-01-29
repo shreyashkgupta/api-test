@@ -27,12 +27,12 @@ resource "google_firestore_database" "gcp-new-test-dev-users" {
   type                              = "FIRESTORE_NATIVE"
 }
 
-resource "random_id" "randomID" {
+resource "random_id" "gcp-new-test-Dev-Create_User-randomID" {
   byte_length = 8
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-Create_User-bucket" {
-  name                        = "${random_id.randomID.hex}-gcf-source"
+  name                        = "${random_id.gcp-new-test-Dev-Create_User-randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -77,12 +77,12 @@ resource "google_cloud_run_service_iam_member" "Dev_Create_User_member" {
   member   = "allUsers"
 }
 
-resource "random_id" "randomID" {
+resource "random_id" "gcp-new-test-Dev-Get_User-randomID" {
   byte_length = 8
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-Get_User-bucket" {
-  name                        = "${random_id.randomID.hex}-gcf-source"
+  name                        = "${random_id.gcp-new-test-Dev-Get_User-randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -127,12 +127,12 @@ resource "google_cloud_run_service_iam_member" "Dev_Get_User_member" {
   member   = "allUsers"
 }
 
-resource "random_id" "randomID" {
+resource "random_id" "gcp-new-test-Dev-Update_User-randomID" {
   byte_length = 8
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-Update_User-bucket" {
-  name                        = "${random_id.randomID.hex}-gcf-source"
+  name                        = "${random_id.gcp-new-test-Dev-Update_User-randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -177,12 +177,12 @@ resource "google_cloud_run_service_iam_member" "Dev_Update_User_member" {
   member   = "allUsers"
 }
 
-resource "random_id" "randomID" {
+resource "random_id" "gcp-new-test-Dev-Delete_User-randomID" {
   byte_length = 8
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-Delete_User-bucket" {
-  name                        = "${random_id.randomID.hex}-gcf-source"
+  name                        = "${random_id.gcp-new-test-Dev-Delete_User-randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
@@ -227,12 +227,12 @@ resource "google_cloud_run_service_iam_member" "Dev_Delete_User_member" {
   member   = "allUsers"
 }
 
-resource "random_id" "randomID" {
+resource "random_id" "gcp-new-test-Dev-List_Users-randomID" {
   byte_length = 8
 }
 
 resource "google_storage_bucket" "gcp-new-test-Dev-List_Users-bucket" {
-  name                        = "${random_id.randomID.hex}-gcf-source"
+  name                        = "${random_id.gcp-new-test-Dev-List_Users-randomID.hex}-gcf-source"
   location                    = "US"
   uniform_bucket_level_access = true
 }
