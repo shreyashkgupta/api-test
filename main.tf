@@ -79,6 +79,7 @@ resource "google_cloudfunctions_function" "cf_Dev_create_user" {
   available_memory_mb = "256"
   timeout = 60
   max_instances = 1
+  trigger_http = true
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_create_user_member" {
@@ -140,6 +141,7 @@ resource "google_cloudfunctions_function" "cf_Dev_get_user" {
   available_memory_mb = "256"
   timeout = 60
   max_instances = 1
+  trigger_http = true
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_get_user_member" {
@@ -201,6 +203,7 @@ resource "google_cloudfunctions_function" "cf_Dev_update_user" {
   available_memory_mb = "256"
   timeout = 60
   max_instances = 1
+  trigger_http = true
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_update_user_member" {
@@ -262,6 +265,7 @@ resource "google_cloudfunctions_function" "cf_Dev_delete_user" {
   available_memory_mb = "256"
   timeout = 60
   max_instances = 1
+  trigger_http = true
 }
 
 resource "google_cloud_run_service_iam_member" "Dev_delete_user_member" {
