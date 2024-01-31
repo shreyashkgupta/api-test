@@ -389,3 +389,8 @@ resource "aws_api_gateway_deployment" "api_gateway_dev_lets_see" {
     create_before_destroy = true
   }
 }
+
+output "api_invoke_url" {
+  description = "The URL of the API endpoint"
+  value = aws_api_gateway_deployment.api_gateway_dev_lets_see.invoke_url
+}
