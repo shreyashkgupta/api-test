@@ -106,6 +106,10 @@ resource "aws_dynamodb_table" "lets_see-dev-users" {
     enabled        = false
   }
 
+  lifecycle {
+    ignore_changes = [ttl]
+  }
+
   tags = {
     Name        = "lets_see-dev-users"
     Environment = "dev"
