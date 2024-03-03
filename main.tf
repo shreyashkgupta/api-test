@@ -10,7 +10,7 @@ terraform {
 
 variable "project_id" {
     type = string
-    default = ''
+    default = ""
     description = "Project ID"
 }
 
