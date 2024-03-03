@@ -39,7 +39,7 @@ resource "random_id" "dev-create-user-randomID" {
 
 resource "google_storage_bucket" "dev-create-user-bucket" {
   name                        = "${random_id.dev-create-user-randomID.hex}-gcf-source"
-  location                    = "US"
+  location                    = var.region
   uniform_bucket_level_access = true
 }
 
@@ -57,7 +57,7 @@ resource "google_storage_bucket_object" "dev-create-user-object" {
 
 resource "google_cloudfunctions2_function" "cf-dev-create-user" {
   name        = "cf-dev-create-user"
-  location    = "us-west2"
+  location    = var.region
 
   build_config {
     runtime     = "python39"
@@ -90,7 +90,7 @@ resource "random_id" "dev-update-user-randomID" {
 
 resource "google_storage_bucket" "dev-update-user-bucket" {
   name                        = "${random_id.dev-update-user-randomID.hex}-gcf-source"
-  location                    = "US"
+  location                    = var.region
   uniform_bucket_level_access = true
 }
 
@@ -108,7 +108,7 @@ resource "google_storage_bucket_object" "dev-update-user-object" {
 
 resource "google_cloudfunctions2_function" "cf-dev-update-user" {
   name        = "cf-dev-update-user"
-  location    = "us-west2"
+  location    = var.region
 
   build_config {
     runtime     = "python39"
@@ -141,7 +141,7 @@ resource "random_id" "dev-delete-user-randomID" {
 
 resource "google_storage_bucket" "dev-delete-user-bucket" {
   name                        = "${random_id.dev-delete-user-randomID.hex}-gcf-source"
-  location                    = "US"
+  location                    = var.region
   uniform_bucket_level_access = true
 }
 
@@ -159,7 +159,7 @@ resource "google_storage_bucket_object" "dev-delete-user-object" {
 
 resource "google_cloudfunctions2_function" "cf-dev-delete-user" {
   name        = "cf-dev-delete-user"
-  location    = "us-west2"
+  location    = var.region
 
   build_config {
     runtime     = "python39"
@@ -192,7 +192,7 @@ resource "random_id" "dev-get-user-by-id-randomID" {
 
 resource "google_storage_bucket" "dev-get-user-by-id-bucket" {
   name                        = "${random_id.dev-get-user-by-id-randomID.hex}-gcf-source"
-  location                    = "US"
+  location                    = var.region
   uniform_bucket_level_access = true
 }
 
@@ -210,7 +210,7 @@ resource "google_storage_bucket_object" "dev-get-user-by-id-object" {
 
 resource "google_cloudfunctions2_function" "cf-dev-get-user-by-id" {
   name        = "cf-dev-get-user-by-id"
-  location    = "us-west2"
+  location    = var.region
 
   build_config {
     runtime     = "python39"
@@ -243,7 +243,7 @@ resource "random_id" "dev-get-all-users-randomID" {
 
 resource "google_storage_bucket" "dev-get-all-users-bucket" {
   name                        = "${random_id.dev-get-all-users-randomID.hex}-gcf-source"
-  location                    = "US"
+  location                    = var.region
   uniform_bucket_level_access = true
 }
 
@@ -261,7 +261,7 @@ resource "google_storage_bucket_object" "dev-get-all-users-object" {
 
 resource "google_cloudfunctions2_function" "cf-dev-get-all-users" {
   name        = "cf-dev-get-all-users"
-  location    = "us-west2"
+  location    = var.region
 
   build_config {
     runtime     = "python39"
