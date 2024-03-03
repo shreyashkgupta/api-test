@@ -127,7 +127,6 @@ function_name                  = "aws-testing-dev-create_user"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_create_user.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
@@ -175,7 +174,6 @@ function_name                  = "aws-testing-dev-get_user"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_get_user.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
@@ -223,7 +221,6 @@ function_name                  = "aws-testing-dev-update_user"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_update_user.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
@@ -271,7 +268,6 @@ function_name                  = "aws-testing-dev-delete_user"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_delete_user.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
@@ -319,7 +315,6 @@ function_name                  = "aws-testing-dev-list_users"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_list_users.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
@@ -367,7 +362,6 @@ function_name                  = "aws-testing-dev-authenticate_user"
 source_code_hash  = "${data.archive_file.zip_the_python_code_dev_authenticate_user.output_base64sha256}"
 role                           = aws_iam_role.lambda_role_dev_aws-testing.arn
 handler                        = "handler.lambda_handler"
-runtime                        = "python3.12"
 depends_on                     = [aws_iam_role_policy_attachment.lambda_policy_dev_aws-testing]
 }
 
